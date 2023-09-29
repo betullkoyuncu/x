@@ -1,0 +1,912 @@
+/*=========================================================================================================	*/
+
+/*			Copyright <1995-2022> JDA Software Group, Inc. All rights reserved.							*/
+
+/*			LICENSE OF THIS PROGRAM IS ONLY ENTITLED TO ACCESS THE CONFIGURATION(S) SPECIFIED IN ITS		*//
+
+/*			SOFTWARE LICENSE AGREEMENT WITH JDA.  ACCESS OF ANY OTHER CONFIGURATION IS A DIRECT VIOLATION	*/
+
+/*			OF THE TERMS OF THE SOFTWARE LICENSE AGREEMENT, AND JDA RETAINS ALL ITS LEGAL RIGHTS TO ENFORCE	*/
+
+/*			SUCH AGREEMENT.																					*/
+
+/*			This product may be protected by one or more United States and foreign patents.					*/
+
+/*			For information on patents, see https://www.jda.com/legal/patents.				**//
+
+
+
+.errorBorder {
+
+border: 1px solid #FF6A13 !important;
+
+}
+
+
+.errorLabel {
+
+  color: #FF6A13; 
+
+}
+
+
+.headerDiv {
+
+	width: 100%;
+
+	height: 36px;
+
+	border-radius: 4px;
+
+	border-color: #D8DFE2;
+
+	background: #007AB4;
+
+}
+
+
+.headerh1 {
+
+	font-size: 18px;
+
+	font-weight: regular;
+
+	color: black;
+
+	margin-left: 8px;
+
+	line-height: 36px;
+
+}
+
+
+.textFieldForm {
+
+	width: 200px;
+
+	height: 24px;
+
+	border-radius: 4px;
+
+	border: 1px solid #D8DFE2;
+
+	background: white;
+
+	padding-left: 5px;
+
+	vertical-align: middle;
+
+}
+
+
+.textFieldFormLabel {
+
+	width: 200px;
+
+	height: 24px;
+
+	border-radius: 4px;
+
+	border: 1px solid #D8DFE2;
+
+	background: white;
+
+	padding-left: 5px;
+
+	vertical-align: middle;
+
+}
+
+
+.grid-container {
+
+	display:-ms-grid;
+
+	display: grid;
+
+	-ms-grid-columns: 20% 80%;
+
+	grid-template-columns: 20% 80%;
+
+	padding: 10px;
+
+	padding-left: 0;
+
+	align-content: start;
+
+}
+
+
+.grid-item {
+
+	display: flex;
+
+	padding: 10px;
+
+	font-size: 16px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+}
+
+
+.grid-itemr1c1 {
+
+	display: flex;
+
+	padding: 10px;
+
+	font-size: 16px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+   -ms-grid-row:1; 
+
+   -ms-grid-column:1; 
+
+   -ms-grid-column-span:1;
+
+}
+
+
+.grid-itemr1c2 {
+
+	display: flex;
+
+	padding: 10px;
+
+	font-size: 16px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+   -ms-grid-row:1; 
+
+   -ms-grid-column:2; 
+
+   -ms-grid-column-span:1;
+
+}
+
+
+.grid-itemr2c1 {
+
+	display: flex;
+
+	padding: 10px;
+
+	font-size: 16px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+   -ms-grid-row:2; 
+
+   -ms-grid-column:1; 
+
+   -ms-grid-column-span:1;
+
+}
+
+
+.grid-itemr2c2 {
+
+	display: flex;
+
+	padding: 10px;
+
+	font-size: 16px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+   -ms-grid-row:2; 
+
+   -ms-grid-column:2; 
+
+   -ms-grid-column-span:1;
+
+}
+
+
+.grid-itemr3c1 {
+
+	display: flex;
+
+	padding: 10px;
+
+	font-size: 16px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+   -ms-grid-row:3; 
+
+   -ms-grid-column:1; 
+
+   -ms-grid-column-span:1;
+
+}
+
+
+.grid-itemr3c2 {
+
+	display: flex;
+
+	padding: 10px;
+
+	font-size: 16px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+   -ms-grid-row:3; 
+
+   -ms-grid-column:2; 
+
+   -ms-grid-column-span:1;
+
+}
+
+
+.selectmeasure {
+
+/*   display: grid;
+
+  grid-template-columns: 48% 4% 48%;  
+
+ */  width:100%;
+
+}
+
+
+
+#container {
+
+  position: relative;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+.buttons {
+
+  position: absolute;
+
+  top: 380px;
+
+  text-align: center;
+
+  width: 100%;
+
+}
+
+.btn {
+
+  width: 50px;
+
+  height: 30px;
+
+}
+
+.step-wizard {
+
+  display: inline-block;
+
+  position: relative;
+
+  width: 100%;
+
+}
+
+.step-wizard .progress {
+
+  position: absolute;
+
+  top: 10px;
+
+  left: 9%;
+
+  width: 79%;
+
+}
+
+.step-wizard .progressbar {
+
+  position: absolute;
+
+  background-color: #0aa89e;
+
+  opacity: 0.4;
+
+  height: 12px;
+
+  border: 1px solid e5e6e6;
+
+  width: 0%;
+
+  -webkit-transition: width 0.6s ease;
+
+  -o-transition: width 0.6s ease;
+
+  transition: width 0.6s ease;
+
+}
+
+.step-wizard .progressbar.empty {
+
+  opacity: 1;
+
+  width: 100%;
+
+  background-color: #e5e6e6;
+
+}
+
+.step-wizard ul {
+
+  position: absolute;
+
+  width: 100%;
+
+  list-style-type: none;
+
+  padding: 0;
+
+  left: -2%;
+
+}
+
+.step-wizard li {
+
+  display: inline-block;
+
+  text-align: center;
+
+  width: 11.2%;
+
+}
+
+.step-wizard li .step {
+
+  position: absolute;
+
+  display: inline-block;
+
+  line-height: 20px;
+
+  width: 20px;
+
+  height: 20px;
+
+  border-radius: 50%;
+
+  border: 4px solid;
+
+  border-color: #e5e6e6;
+
+  background: #ffffff;
+
+  margin-top:-10px;
+
+  -webkit-transition: background-color 0.6s ease, border-color 0.6s ease;
+
+  -o-transition: background-color 0.6s ease, border-color 0.6s ease;
+
+  transition: background-color 0.6s ease, border-color 0.6s ease;
+
+}
+
+.step-wizard li .title {
+
+  position: absolute;
+
+  width: 100%;
+
+  left: 20px;
+
+  padding-top: 25px;
+
+  color: #969c9c;
+
+  -webkit-transition: color 0.6s ease;
+
+  -o-transition: color 0.6s ease;
+
+  transition: color 0.6s ease;
+
+}
+
+.step-wizard li.active .step {
+
+  border-color: #0aa89e;
+
+}
+
+.step-wizard li.active .title {
+
+  color: black;
+
+  font-size:12px;
+
+}
+
+.step-wizard li.done .step {
+
+  color: white;
+
+  background-color: #0aa89e;
+
+  border-color: #0aa89e;
+
+}
+
+.step-wizard li > a {
+
+  display: block;
+
+  width: 100%;
+
+  color: black;
+
+  position: relative;
+
+  text-align: center;
+
+}
+
+.step-wizard li > a:hover .step {
+
+  border-color: #0aa89e;
+
+}
+
+.step-wizard li > a:hover .title {
+
+  color: black;
+
+}
+
+
+/* Create two equal columns that floats next to each other */
+
+.column {
+
+    float: left;
+
+    padding: 10px;
+
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+
+    content: "";
+
+    display: table;
+
+    clear: both;
+
+}
+
+
+/* The Modal (background) */
+
+.modal {
+
+    display: none; /* Hidden by default */
+
+    position: fixed; /* Stay in place */
+
+    z-index: 1; /* Sit on top */
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%; /* Full width */
+
+    height: 100%; /* Full height */
+
+    overflow: auto; /* Enable scroll if needed */
+
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+
+    -webkit-animation-duration:1s;
+
+    animation-name: fadeIn;
+
+    animation-duration: 1s
+
+}
+
+
+/* Modal Content */
+
+.modal-content {
+
+    position: fixed;
+
+    bottom: 10px;
+
+    right:10px;
+
+    background-color: rgba(242, 242, 242, 1);
+
+    width: 50%;
+
+    height:80%;
+
+    -webkit-animation-name: slideIn;
+
+    -webkit-animation-duration: 1s;
+
+    animation-name: slideIn;
+
+    animation-duration: 1s
+
+}
+
+
+/* The Close Button */
+
+.close {
+
+    color: white;
+
+    float: right;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+}
+
+
+.close:hover,
+
+.close:focus {
+
+    color: #000;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+.modal-header {
+
+    padding: 2px 16px; font-size:18px;
+
+    background-color: #5cb85c;
+
+    color: white;
+
+}
+
+
+.liclass {
+
+	width: 100%;
+
+	height:30px;
+
+	text-align: center;
+
+ 	color: black;
+
+ 	cursor: pointer;
+
+}
+
+
+li.active
+
+{
+
+    background: #b84dff;
+
+    color: white;
+
+}
+
+
+.modal-body { display:-ms-grid;	-ms-grid-columns: 20% 80%; padding: 2px 2px;	display: grid;grid-template-columns: 20% 80%;}
+
+
+.modal-body-four-column { display:-ms-grid;	-ms-grid-columns: 20% 50% 10% 20%; padding: 10px;	padding-left: 0; align-content: start;	display: grid; grid-template-columns: 20% 50% 10% 20%;}
+
+
+.modal-body-three-column { display:-ms-grid;	-ms-grid-columns: 200px 150px 300px; padding: 2px 16px;	display: grid;grid-template-columns: 200px 150px 300px; background-color: rgba(242, 242, 242, 1);}
+
+
+.viewcriticalitymatrix {
+
+	padding: 2px 16px;	
+
+	display:-ms-grid;	
+
+	-ms-grid-columns: 50% 50%;
+
+	display: grid;
+
+	grid-template-columns: 50% 50%; 
+
+	}
+
+	
+
+.groupElement {
+
+    font-size:18px;
+
+    height:auto;
+
+    margin:10px;
+
+    border: 1px solid black;
+
+    background-color: white;
+
+    
+
+}
+
+
+.groupElementHeader {
+
+	height:50px;
+
+	width:100%;
+
+	background-color:rgba(242, 242, 242, 4);
+
+	line-height: 50px;  
+
+	text-align: center;
+
+}
+
+
+.groupElementRuleDiv {
+
+	height:100%;
+
+	width:100%;
+
+	background-color:white; 
+
+	text-align: center;
+
+}
+
+
+.groupElementParameterDiv {
+
+	padding: 2px 16px;	
+
+	display: grid;
+
+	grid-template-columns: 40% 60%; 
+
+	background-color:white; 
+
+	text-align: center;
+
+	height:100%
+
+}
+
+
+
+.groupElementRuleSpan {
+
+	font-size:14px;
+
+}
+
+
+.modal-footer {
+
+    padding: 2px 16px;
+
+    background-color: #5cb85c;
+
+    color: white;
+
+}
+
+
+.grid-container-popup {
+
+	display:-ms-grid;
+
+	display: grid;
+
+	-ms-grid-columns: 35% 65%;
+
+	grid-template-columns: 35% 55%;
+
+	padding: 10px;
+
+	padding-left: 0;
+
+	align-content: start;
+
+}
+
+
+.grid-item-popup {
+
+	display: flex;
+
+	padding: 5px;
+
+	font-size: 12px;
+
+	text-align: right;
+
+	align-self: flex-start;
+
+}
+
+
+.plotbandcss {
+
+	border-top: 8px;
+
+	border-top-color: black;
+
+}
+
+
+.containerTableStyle {
+
+	position: relative;
+
+	border: 1px solid #dfdfdf;
+
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.09);
+
+	
+
+}
+
+
+.grid-container-output-graph-section{
+
+	display: grid;
+
+	grid-template-columns: 20% 5% 74%;
+
+	padding: 10px;
+
+	padding-left: 0;
+
+	align-content: start;
+
+}
+
+
+.grid-container-output-search {
+
+	display:-ms-grid;
+
+	display: grid;
+
+	-ms-grid-columns: 33%  33%  33%;
+
+	grid-template-columns: 33%  33%  33%;
+
+	padding: 10px;
+
+	padding-left: 0;
+
+	align-content: start;
+
+}
+
+.grid-container-output-searchrxcx {
+
+	display: grid;
+
+	grid-template-columns: 70%;
+
+	padding: 10px;
+
+	padding-left: 0;
+
+	align-content: start;
+
+   -ms-grid-column-span:1;
+
+}
+
+.grid-item-search {
+
+	display: grid;
+
+	grid-template-columns: 70%;
+
+	padding: 10px;
+
+	padding-left: 0;
+
+	align-content: start;
+
+}
+
+
+.grid-item-search-test {
+
+	display: grid;
+
+	grid-template-columns: 30% 70%;
+
+	padding: 10px;
+
+	padding-left: 0;
+
+	align-content: start;
+
+}
+
+
+#rulesgridDiv table.hdr td {
+
+	text-align:left;
+
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes slideIn {
+
+    from {right: -300px; opacity: 0} 
+
+    to {right: 10px; opacity: 1}
+
+}
+
+
+@keyframes slideIn {
+
+    from {right: -300px; opacity: 0}
+
+    to {right: 10px; opacity: 1}
+
+}
+
+
+@-webkit-keyframes fadeIn {
+
+    from {opacity: 0} 
+
+    to {opacity: 1}
+
+}
+
+
+@keyframes fadeIn {
+
+    from {opacity: 0} 
+
+    to {opacity: 1}
+
+}
