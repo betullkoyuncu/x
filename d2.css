@@ -1,0 +1,18 @@
+:root {
+  --brand-color: red; /* Default value */
+  --header-theme: {
+    color: var(--brand-color);
+    font-family: cursive;
+    font-weight: 600;
+  };
+}
+
+h1 {
+  @apply --header-theme;
+}
+
+
+h2 {
+  --brand-color: green;
+  @apply --header-theme;
+}
